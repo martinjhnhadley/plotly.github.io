@@ -53,7 +53,7 @@ gulp.task('sass_cache', function () {
             browsers: ['last 15 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('./styles'))
+        .pipe(gulp.dest('_site/styles'))
         .pipe(hashsum({filename: './_data/cache_bust_css.yml', hash: 'md5'}))
         .pipe(browserSync.stream())
 });
